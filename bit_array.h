@@ -13,11 +13,13 @@
 
 typedef struct bit_array bit_array;
 
+// Create or destroy a bit_array
 bit_array* new_bit_array(ulong N);
 void free_bit_array(bit_array* B);
 
 ulong num_bits(bit_array* B);
 
+// Manipulate a bit_array
 void set_bit(bit_array* B, ulong idx);
 void zero_bit(bit_array *B, ulong idx);
 void switch_bit(bit_array* B, ulong idx);
@@ -27,4 +29,3 @@ void set_all(bit_array* B);
 void zero_all(bit_array* B);
 
 #endif
-

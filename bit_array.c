@@ -23,13 +23,14 @@ bit_array* new_bit_array(ulong N)
     return array;
 }
 
+// Free the memory used by the bit_array.
 void free_bit_array(bit_array* B)
 {
     free(B->words);
     free(B);
 }
 
-// How many bits?
+// Returns the capacity of the bit_array.
 ulong num_bits(bit_array *B)
 {
     return B->nbits;
